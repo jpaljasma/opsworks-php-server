@@ -1,5 +1,5 @@
 include_recipe "apache2::service"
-include_recipe "appserver::swap"
+#include_recipe "appserver::swap"
 
 # install necessary packages: memcached, apc, geoip-devel
 packages = [
@@ -70,7 +70,7 @@ bash "enable_geoip_module_for_php" do
 end
 
 # Update GeoIP
-include_recipe "appserver::geoipupdate"
+#include_recipe "appserver::geoipupdate"
 
 # Restart Apache afterwards
 service "apache2" do
